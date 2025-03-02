@@ -1,0 +1,9 @@
+modelClass: GromIT\Catalog\Models\Category
+list:
+    columns:
+        name:
+            label: Название
+            type: text
+        wbs:
+            label: WBS
+            type: text

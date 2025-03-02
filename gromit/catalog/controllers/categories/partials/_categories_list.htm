@@ -1,0 +1,36 @@
+<div id="category-tree" class="nested-tree">
+    {% for category in categories %}
+    <div class="tree-node" data-id="{{ category.id }}">
+        <input type="checkbox" name="checked[]" value="{{ category.id }}">
+        {{ category.wbs }} - {{ category.name }}
+        {% if category.children %}
+        <div class="children">
+            {% partial '__children' children=category.children %}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{% partial '__children' %}
+{% partial '__children' children %}
+{% for child in children %}
+<div class="tree-node" data-id="{{ child.id }}" style="margin-left: 20px;">
+    <input type="checkbox" name="checked[]" value="{{ child.id }}">
+    {{ child.wbs }} - {{ child.name }}
+    {% if child.children %}
+    <div class="children">
+        {% partial '__children' children=child.children %}
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endpartial %}
+
+{% styles %}
+<link rel="stylesheet" href="{{ 'gromit::css/catalog.css' | theme }}">
+{% endstyles %}
+
+{% scripts %}
+<script src="{{ 'gromit::js/catalog.js' | theme }}"></script>
+{% endscripts %}

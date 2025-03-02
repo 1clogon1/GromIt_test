@@ -1,0 +1,5 @@
+1.0.1:
+    - First version of Catalog
+1.0.2:
+    - Create categories table
+    - create_categories_table.php

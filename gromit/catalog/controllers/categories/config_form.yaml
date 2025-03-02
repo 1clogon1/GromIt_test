@@ -1,0 +1,10 @@
+modelClass: GromIT\Catalog\Models\Category
+form:
+    fields:
+        name:
+            label: Название
+            type: text
+        parent_id:
+            label: Родительская категория
+            type: dropdown
+            options: "{{ categories }}"
