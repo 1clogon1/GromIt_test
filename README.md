@@ -1,4 +1,4 @@
-Тестовое задание GromIT, плагин для OctoberCMS
+**Тестовое задание GromIT, плагин для OctoberCMS**
 
 
 При разработке использовал БД PostgreSQL.
